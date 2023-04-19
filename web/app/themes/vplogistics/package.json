@@ -1,0 +1,41 @@
+{
+  "name": "wordpress-starter-theme-parcel",
+  "description": "A WordPress starter theme using Parcel.",
+  "version": "1.0.1",
+  "homepage": "https://github.com/lukeharvey/wordpress-starter-theme-parcel",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukeharvey/wordpress-starter-theme-parcel.git"
+  },
+  "author": {
+    "name": "Luke Harvey",
+    "url": "https://lukeharvey.co.uk"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "sanitize.css": "^11.0.0",
+    "sass": "^1.22.10",
+    "stylelint": "^10.1.0",
+    "stylelint-config-suitcss": "^14.0.0"
+  },
+  "main": "",
+  "scripts": {
+    "clean": "rm dist/*",
+    "watch": "parcel watch src/main.js",
+    "build": "parcel build src/main.js",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint src/js/modules",
+    "lint": "npm run stylelint && npm run eslint"
+  },
+  "dependencies": {
+    "lazysizes": "^4.1.8"
+  }
+}

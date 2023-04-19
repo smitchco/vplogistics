@@ -41,6 +41,8 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/custom-post-type-ui": "^1.12",
+    "wpackagist-plugin/contact-form-7": "5.5.6.1",
+    "wpackagist-plugin/contact-form-cfdb7": "1.2.6.4",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",
     "wpackagist-plugin/error-log-monitor": "^1.7",
     "wpackagist-plugin/wp-smushit": "^3.9",

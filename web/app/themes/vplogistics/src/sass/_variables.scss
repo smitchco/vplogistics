@@ -1,0 +1,42 @@
+@use 'sass:map';
+
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xlg: 1420px; 
+$screen-xxlg: 1600px;
+$screen-xxxlg: 1900px;
+
+$colors: (
+    'blue': #022B55,
+    'blue-light': #005CB9,
+    'gold': #EF9411, 
+    'gray': #91978D, 
+    'peach': #F4D6B3,
+    'white': #FFFFFF, 
+    'green': #40CEA9, 
+    'black': #000000
+);
+
+$blue: map.get($colors, 'blue');
+$blue-light: map.get($colors, 'blue-light');
+$gold: map.get($colors, 'gold'); 
+$gray: map.get($colors,'gray'); 
+$peach: map.get($colors, 'peach');
+$white: map.get($colors, 'white'); 
+$green: map.get($colors, 'green'); 
+$black: map.get($colors, 'black');
+
+$font_display: 'Inter', sans-serif;
+$font_body: 'Inter', sans-serif;
+$font_tech: 'JetBrains Mono', monospace;
+$font_icon: 'Font Awesome 6 Free';
+
+$font_weight_bold: 700;
+$font_weight_semibold: 600;
+$font_weight_normal: 400;
+$font_weight_light: 100;
+
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";

@@ -17,26 +17,27 @@
 
 <body <?php body_class(); ?>>
 
-  <header class="Header" role="banner">
-
-    <!-- <div class="Header-logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        <div class="Svg Svg--logo">
-          <?php get_template_part( 'assets/svg/logo.svg' ); ?>
+  <header class="header py-5" role="banner">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto">
+          <div class="header-logo">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+              <div class="svg svg--logo">
+              <?php include( 'inc/svg/logo-horizontal.svg' ); ?>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
-    </div> -->
-
-    <h1 class="Header-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-    <h2 class="Header-description"><?php bloginfo( 'description' ); ?></h2>
-
-    <nav class="Header-nav" role="navigation">
-      <?php wp_nav_menu( array(
-        'container' => false,
-        'menu_class' => 'Header-menu',
-        'theme_location' => 'header'
-      ) ); ?>
-    </nav>
-
+        <div class="col-auto ml-auto">
+          <nav class="header__nav" role="navigation">
+            <?php wp_nav_menu( array(
+              'container' => false,
+              'menu_class' => 'header__menu',
+              'theme_location' => 'header'
+            ) ); ?>
+          </nav>
+        </div>
+      </div>
+    </div>
   </header>

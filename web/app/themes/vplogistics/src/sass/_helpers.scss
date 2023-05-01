@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use 'sass:math';
+
+@for $i from 1 through 10 {
+  .bg-blue-#{$i} {
+    background-color: lighten($blue, 10 * $i) !important;
+  }
+}
+
+@each $prop, $value in map-keys($colors) {
+    .bg-#{$prop} {
+        background-color: map.get($colors, $prop) !important;
+    }
+    .text-#{$prop} {
+        color: map.get($colors, $prop) !important;
+    }
+}
+
+@for $i from 0 through 20 {
+  $multiplier: 100 + (5 * $i);
+
+  .lh-#{$multiplier} {
+    line-height: percentage(math.div($multiplier, 100)) !important;
+  }
+}

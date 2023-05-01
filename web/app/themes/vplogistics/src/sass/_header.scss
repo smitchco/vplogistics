@@ -1,0 +1,54 @@
+.header {
+  &__title {
+    font-size: 6.5rem; 
+    color: $blue;
+    font-weight: bold;
+  }
+
+  &__menu {
+    list-style: none; 
+    display: flex; 
+
+    li {
+      font-size: 1.0625rem; 
+      display: flex; 
+
+      a {
+        padding: 0 20px;
+        @extend .my-auto; 
+        display: flex;
+        align-items: center; 
+        height: 100%; 
+        position: relative;
+
+        &:hover {
+          text-decoration: none; 
+
+          &::before {
+            background: $gray-light; 
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0; 
+          left: 0;
+          width: 100%;
+          height: 12px;
+        }
+      }
+
+      &.current_page_item {
+
+        a {
+          font-weight: bold; 
+          
+          &::before {
+            background: $gold; 
+          }
+        }
+      }
+    }
+  }
+}

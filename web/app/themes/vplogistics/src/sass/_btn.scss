@@ -1,0 +1,9 @@
+.btn {
+  &-primary {
+    background: $blue-light; 
+  }
+  &-secondary {
+    background: $blue; 
+    border: 1px solid $blue-light; 
+  }
+}

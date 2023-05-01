@@ -17,7 +17,7 @@ $colors: (
     'peach': #F4D6B3,
     'white': #FFFFFF, 
     'green': #40CEA9, 
-    'black': #000000
+    'black': #000000,
 );
 
 $blue: map.get($colors, 'blue');
@@ -28,6 +28,7 @@ $peach: map.get($colors, 'peach');
 $white: map.get($colors, 'white'); 
 $green: map.get($colors, 'green'); 
 $black: map.get($colors, 'black');
+$gray-light: lighten(map.get($colors, 'gray'), 30%);
 
 $font_display: 'Inter', sans-serif;
 $font_body: 'Inter', sans-serif;
@@ -40,3 +41,4 @@ $font_weight_normal: 400;
 $font_weight_light: 100;
 
 $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+

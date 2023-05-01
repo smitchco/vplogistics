@@ -17,23 +17,24 @@
 
 <body <?php body_class(); ?>>
 
-  <header class="header py-5" role="banner">
+  <header class="header" role="banner">
     <div class="container-fluid">
       <div class="row">
         <div class="col-auto">
-          <div class="header-logo">
+          <div class="header-logo py-5">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
               <div class="svg svg--logo">
-              <?php include( 'inc/svg/logo-horizontal.svg' ); ?>
+                <?php include( 'inc/svg/logo-horizontal.svg' ); ?>
               </div>
             </a>
           </div>
         </div>
+
         <div class="col-auto ml-auto">
-          <nav class="header__nav" role="navigation">
+          <nav class="header__nav h-100" role="navigation">
             <?php wp_nav_menu( array(
               'container' => false,
-              'menu_class' => 'header__menu',
+              'menu_class' => 'header__menu h-100',
               'theme_location' => 'header'
             ) ); ?>
           </nav>

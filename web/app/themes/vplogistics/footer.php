@@ -8,26 +8,26 @@
     <div class="container-fluid">
      
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-auto">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <div class="svg svg--logo py-5">
               <?php include( 'inc/svg/logo-full.svg' ); ?>
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-6">
-          <h4 class="text-uppercase text-white h2 lh-100">We've Got It from Here</h4>
-          <?php include( 'inc/svg/truck-outline.svg' ); ?>
-
+        <div class="col-12 ml-md-auto col-md-auto">
+          <div class="position-relative">
+            <?php include( 'inc/svg/truck-outline.svg' ); ?>
+          </div>
         </div>
       </div>
       
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p--med">
+          <ul class="p--med footer__list">
             <li>
-              <h4>Contact</h4>
-              1909 S Waukegan Road
+              <h4 class="text-gray p--small">Contact</h4>
+              1909 S Waukegan Road<br/>
               Waukegan, IL 60085
           </li>
           <li>
@@ -44,8 +44,8 @@
 
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p--med">
-            <li>Logistics Program</li>
+          <h4 class="text-gray p--small">Logistics Program</h4>
+          <ul class="p--med footer__list">
             <li>Expedited</li>
             <li>Drayage</li>
             <li>Truckload</li>
@@ -56,15 +56,15 @@
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p--med">
-            <li>Approach</li>
+          <h4 class="text-gray p--small">Approach</h4>
+          <ul class="p--med footer__list">
             <li>Carrier Network</li>
             <li>Asset-based</li>
             <li>Operations</li>
           </ul>
 
-          <ul class="p--med">
-            <li>Company</li>
+          <h4 class="text-gray p--small mt-5">Company</h4>
+          <ul class="p--med footer__list">
             <li>About VPL</li>
             <li>Careers</li>
             <li>History</li>
@@ -74,23 +74,23 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           
-          <a href="" class="btn btn-primary btn-block btn-lg">Contact Us</a>
-          <a href="" class="btn btn-primary btn-block btn-lg">Join Our Network</a>
-          <a href="" class="btn btn-secondary btn-block btn-lg">FAQs</a>
-          <a href="" class="btn btn-primary btn-block btn-lg">Request A Quote</a>
+          <a href="" class="btn btn-primary btn-block btn-lg mb-3">Contact Us</a>
+          <a href="" class="btn btn-primary btn-block btn-lg mb-3">Join Our Network</a>
+          <a href="" class="btn btn-secondary btn-block btn-lg mb-3">FAQs</a>
+          <a href="" class="btn btn-primary btn-block btn-lg mb-3">Request A Quote</a>
 
         </div>
       </div>
 
       <div class="row">
-        <div class="col-auto">
-          <p class="text-white p--med">&copy; Copyright <?php echo date('Y'); ?> VPLogistics</p>
+        <div class="col-auto mt-5">
+          <p class="text-gray p--med">&copy; Copyright <?php echo date('Y'); ?> VPLogistics</p>
         </div>
-        <div class="col-auto">
-          <ul class="p--med text-white">
-            <li>Terms &amp; Conditions</li> 
-            <li>Privacy Policy</li>
-            <li>Do Not Sell Or Share My Information</li>
+        <div class="col-auto mt-5">
+          <ul class="p--med text-gray footer__list">
+            <li class="d-inline-block ml-3">Terms &amp; Conditions</li> 
+            <li class="d-inline-block ml-3">Privacy Policy</li>
+            <li class="d-inline-block ml-3">Do Not Sell Or Share My Information</li>
           </ul>
         </div>
       </div>

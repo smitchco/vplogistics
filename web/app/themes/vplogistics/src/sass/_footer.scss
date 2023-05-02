@@ -3,4 +3,10 @@
   color: $white; 
   position: relative;
   overflow: hidden;
+
+  &__list {
+    list-style: none; 
+    margin: 0;
+    padding: 0; 
+  }
 }

@@ -14,6 +14,11 @@
     .text-#{$prop} {
         color: map.get($colors, $prop) !important;
     }
+    .outline-hover-#{$prop} {
+      &:hover {
+        outline: 20px solid map.get($colors, $prop) !important;
+      }
+    }
 }
 
 @for $i from 0 through 20 {

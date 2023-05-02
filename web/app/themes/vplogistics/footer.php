@@ -24,7 +24,7 @@
       
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p">
+          <ul class="p--med">
             <li>
               <h4>Contact</h4>
               1909 S Waukegan Road
@@ -44,7 +44,7 @@
 
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p">
+          <ul class="p--med">
             <li>Logistics Program</li>
             <li>Expedited</li>
             <li>Drayage</li>
@@ -56,14 +56,14 @@
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <ul class="p">
+          <ul class="p--med">
             <li>Approach</li>
             <li>Carrier Network</li>
             <li>Asset-based</li>
             <li>Operations</li>
           </ul>
 
-          <ul class="p">
+          <ul class="p--med">
             <li>Company</li>
             <li>About VPL</li>
             <li>Careers</li>
@@ -84,10 +84,10 @@
 
       <div class="row">
         <div class="col-auto">
-          <p class="text-white">&copy; Copyright <?php echo date('Y'); ?> VPLogistics</p>
+          <p class="text-white p--med">&copy; Copyright <?php echo date('Y'); ?> VPLogistics</p>
         </div>
         <div class="col-auto">
-          <ul class="p text-white">
+          <ul class="p--med text-white">
             <li>Terms &amp; Conditions</li> 
             <li>Privacy Policy</li>
             <li>Do Not Sell Or Share My Information</li>

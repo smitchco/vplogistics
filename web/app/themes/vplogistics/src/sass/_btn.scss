@@ -1,9 +1,123 @@
 .btn {
+  padding: 22px 66px;
+  font-size: 1rem; 
+  line-height: 100%; 
+  font-weight: bold; 
+
   &-primary {
     background: $blue-light; 
+    border: none; 
   }
+
   &-secondary {
     background: $blue; 
     border: 1px solid $blue-light; 
+  }
+
+  &-tertiary {
+    background: $green; 
+    border: none; 
+  }
+
+  &-line {
+    color: $orange; 
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    padding-left: 150px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 116px;
+      height: 1.5px; 
+      background: $orange;
+      display: block;
+      position: absolute;
+      left: 0; 
+      top: calc(50% - .75px);
+    }
+
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      border-right: 1.5px solid $orange;
+      border-top: 1.5px solid $orange; 
+      left: 108px;
+      display: block; 
+      position: absolute; 
+      top: calc(50% - 4px);
+    }
+    &:hover {
+      color: darken($orange, 10%);
+      text-decoration: none; 
+    }
+  }
+
+  &-circle {
+    position: relative; 
+    color: $blue; 
+    padding-left: 60px;
+    height: 45px;
+    line-height: 45px;
+    padding-top: 0; 
+    padding-bottom: 0; 
+    display: inline-block;
+    font-size: 1rem; 
+
+    &::before {
+      content: '';
+      width: 41px;
+      height: 41px; 
+      border: 1px solid $blue-light;
+      border-radius: 100%; 
+      display: block;
+      position: absolute;
+      left: 2px; 
+      top: 2px;
+    }
+
+    &::after {
+      content: '';
+      width: 45px;
+      height: 45px; 
+      border: 1px dashed $blue;
+      border-radius: 100%; 
+      display: block;
+      position: absolute;
+      left: 0; 
+      top: 0;
+    }
+
+    i {
+      &::before {
+        content: '';
+        width: 15px;
+        height: 1.5px; 
+        background: $orange;
+        display: block;
+        position: absolute;
+        left: 15px; 
+        top: calc(50% - .75px);
+      }
+  
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        border-right: 1.5px solid $orange;
+        border-top: 1.5px solid $orange; 
+        left: 22px;
+        display: block; 
+        position: absolute; 
+        top: calc(50% - 4px);
+      }
+    }
+
+    &:hover {
+      text-decoration: none; 
+    }
   }
 }

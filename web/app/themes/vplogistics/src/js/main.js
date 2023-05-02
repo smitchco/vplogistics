@@ -10,4 +10,14 @@ jQuery(document).ready(function() {
       jQuery(this).css("flex-grow", 1);
     }
   );
+
+  const swiperArticle = new Swiper(".swiper-container--article", {
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 2.25,
+    autoplay: {
+      delay: 5000
+    },
+    spaceBetween: 0
+  });
 });

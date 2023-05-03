@@ -5,7 +5,9 @@
 
 get_header(); ?>
 
-  <main class="Main" role="main">
+<main class="main" role="main">
+
+  <div class="container-fluid container--max">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -13,7 +15,7 @@ get_header(); ?>
 
     <?php endwhile; // end of the loop. ?>
 
-  </main><!-- .Main -->
+  </div>
+</main><!-- .Main -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

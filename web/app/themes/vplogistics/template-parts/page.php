@@ -5,8 +5,10 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('Page'); ?>>
 
-  <header class="Page-header">
-    <h1 class="Page-title"><?php the_title(); ?></h1>
+  <header>
+    <h1 class="header__title text-uppercase lh-100 py-5">
+      <?php the_title(); ?>
+    </h1>
   </header>
 
   <?php /* Show featured image (if present) and add lazyloading markup */ ?>

@@ -7,11 +7,11 @@ get_header(); ?>
 
   <main class="main" role="main">
 
-  <section class="py-5">
-    <div class="container-fluid">
+  <section class="pt-5 container--home-hero">
+    <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-6">
-          <h1 class="header__title text-uppercase lh-100">We've Got It from Here</h1>
+        <div class="col-12 col-lg-6 py-5">
+          <h1 class="header__title text-uppercase lh-100 py-5">We've Got It from Here</h1>
         </div>
         <div class="col-12 col-lg-6 bg-blue">
           <div class="bg-blue text-white p-5">
@@ -26,8 +26,8 @@ get_header(); ?>
   </section>
 
 
-  <section class="py-5 carousel--home">
-    <div class="container-fluid">
+  <section class="carousel--home bg-blue">
+    <div class="container-fluid container--max">
       <div class="row justify-content-center">
         <?php for ($i = 1; $i <= 7; $i++): ?>
           <div class="col text-white bg-blue-<?php echo $i; ?> py-5 carousel__slide">
@@ -54,12 +54,12 @@ get_header(); ?>
   </section>
   
   <section class="py-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
+    <div class="container-fluid px-0">
+      <div class="row mx-0">
+        <div class="col-12 px-0">
           <div class="swiper-container swiper-container--article">
             <div class="swiper-wrapper">
-              <?php for ($i = 1; $i <= 4; $i++): ?>
+              <?php for ($i = 1; $i <= 10; $i++): ?>
                 <div class="swiper-slide">
                   <div class="article p-5 bg-blue-<?php echo $i; ?> ">
                     <p class="article__overline">ARTICLE</p>
@@ -75,24 +75,24 @@ get_header(); ?>
   </section>
 
   <section class="py-5">
-    <div class="container-fluid">
-      <div class="row">
+    <div class="container-fluid container--max">
+      <div class="row justify-content-center">
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Solutions Driven</h3>
           <p class="p--small">Another day, another customized shipping solution. Get moving with on-time shipping, real-time visibility and dedicated personal service.</p>
           <a href="" class="btn-circle btn-lg mt-5"><i></i>Request A Quote</a>
 
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Performance Driven</h3>
           <p class="p--small">Turn your supply chain into a competitive advantage. Learn how we connect a nationwide network with constantly-evolving technology.</p>
           <a href="" class="btn-circle btn-lg mt-5"><i></i>Learn More</a>
 
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Value Driven</h3>
           <p class="p--small">At VP Logistics, we take every shipment personally. Our teams are committed to industry-leading excellence and customer satisfaction.</p>
           <a href="" class="btn-circle btn-lg mt-5"><i></i>Get To Know Us</a>
@@ -127,7 +127,7 @@ get_header(); ?>
   </section>
 
   <section class="py-5">
-    <div class="container-fluid">
+    <div class="container-fluid container--max">
       <div class="row">
         <div class="col-12 col-md-6 py-5">
           <h3 class="h1 text-blue-light lh-100 text-uppercase"><strong>Join A Team of Thinkers &amp; Doers.</strong></h1>

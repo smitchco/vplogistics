@@ -1,3 +1,9 @@
 .swiper-container {
   overflow: hidden; 
+
+  &--article {
+    @media (min-width: $screen-xxlg) {
+      margin-left: calc((100vw - $screen-xxlg) / 2)
+    }
+  }
 }

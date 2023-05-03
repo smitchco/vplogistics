@@ -18,7 +18,7 @@
 <body <?php body_class(); ?>>
 
   <header class="header" role="banner">
-    <div class="container-fluid">
+    <div class="container-fluid container--max">
       <div class="row">
         <div class="col-auto">
           <div class="header-logo py-5">

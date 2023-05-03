@@ -1,17 +1,17 @@
-.carousel {
-  &__slide {
-    transition: all .5s;
+.container {
+  &--max {
+    max-width: 1600px;
   }
 
-  &--home {
+  &--home-hero {
     position: relative; 
     &::before {
       content: '';
       position: absolute;
       top: 0; 
-      left: 0;
+      right: 0;
       width: 50%;
-      background: $white; 
+      background: $blue; 
       height: 100%;
     }
   }

@@ -1,6 +1,7 @@
 .carousel {
   &__slide {
     transition: all .5s;
+    background-size: cover; 
 
     &--active {
       

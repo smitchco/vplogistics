@@ -27,15 +27,28 @@ get_header(); ?>
 
 
   <section class="carousel--home bg-blue">
-    <div class="container-fluid container--max">
-      <div class="row justify-content-center">
-        <?php for ($i = 1; $i <= 7; $i++): ?>
-          <div class="col text-white bg-blue-<?php echo $i; ?> py-5 carousel__slide">
-            <div class="overflow-hidden">
-              <h4>Slide <?php echo $i; ?></h4>
+    <div class="container-fluid container--max px-0">
+      <div class="row mx-0 justify-content-center">
+        <?php
+        while (have_rows('homepage_slider')): 
+          the_row(); 
+        ?>
+          <div class="col text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], 'square_medium')[0]; ?>)">
+            <div class="card card--min p-3 d-flex h-100">
+              <a href="http://www.google.com" class="card__link"></a>
+              <div class="card__body h-100 d-flex flex-column">
+                <h4 class="p card__overline mb-auto lh-100">
+                  <span class="card__overline__title py-3">
+                    <?php echo get_sub_field('slider_title'); ?>
+                  </span>
+                </h4>
+                <p class="lh-100 mt-auto p--small pb-0 mb-0 card__content pb-5">
+                  <?php echo get_sub_field('slider_content'); ?>
+                </p>
+              </div>
             </div>
           </div>
-        <?php endfor; ?>
+        <?php endwhile; ?>
       </div>
     </div>
   </section>

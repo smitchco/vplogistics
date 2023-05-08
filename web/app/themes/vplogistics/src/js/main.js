@@ -5,9 +5,11 @@ jQuery(document).ready(function() {
   jQuery(".carousel--home .carousel__slide").hover(
     function() {
       jQuery(this).css("flex-grow", 3);
+      jQuery(this).addClass("carousel__slide--active");
     },
     function() {
       jQuery(this).css("flex-grow", 1);
+      jQuery(this).removeClass("carousel__slide--active");
     }
   );
 

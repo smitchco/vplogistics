@@ -8,6 +8,10 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
+# Specific Plugins
+!web/app/mu-plugins/advanced-custom-fields-pro
+
+
 # WordPress
 web/wp
 web/.htaccess

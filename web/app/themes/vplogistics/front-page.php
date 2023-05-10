@@ -3,7 +3,11 @@
  * A custom template for the front page
  */
 
-get_header(); ?>
+get_header();
+
+while(have_posts()): the_post(); 
+
+?>
 
   <main class="main" role="main">
 
@@ -72,14 +76,28 @@ get_header(); ?>
         <div class="col-12 px-0">
           <div class="swiper-container swiper-container--article">
             <div class="swiper-wrapper">
-              <?php for ($i = 1; $i <= 10; $i++): ?>
-                <div class="swiper-slide">
-                  <div class="article p-5 bg-blue-<?php echo $i; ?> ">
+              <?php
+              
+              $q = new WP_Query([
+                'post_type' => 'post',
+                'posts_per_page' => 10,
+                'order' => 'DESC',
+                'orderby' => 'date'
+              ]);
+
+              while ($q->have_posts()): $q->the_post(); 
+              ?>
+                <div class="swiper-slide text-white">
+                  <div class="article p-5 position-relative h-100" style="background: url(<?php the_post_thumbnail_url('square_large'); ?>);">
+                    <a href="<?php the_permalink(); ?>" class="card__link"></a>
                     <p class="article__overline">ARTICLE</p>
-                    <h4 class="article__title">5 Logistics Technology Trends to Follow in 2023</h4>
+                    <h4 class="article__title mt-5 pt-5">
+                      <?php the_title(); ?>
+                    </h4>
                   </div>
                 </div>
-              <?php endfor; ?>
+              <?php endwhile; 
+              wp_reset_postdata(); ?>
             </div>
           </div>
         </div>
@@ -118,21 +136,25 @@ get_header(); ?>
   <section>
     <div class="container-fluid p-0">
       <div class="row mx-0 h-100">
-        <div class="col-12 col-md-6">
-          <div class="outline-hover-blue-light p-5 text-center h-100">
-            <h3 class="text-uppercase">Shippers</h3>
-            <p>Go the extra mile in today's complex freight market. Manage your costs with unmatched quality, speed and integration.</p>
-            <a href="" class="btn btn-primary btn-lg mt-4">Ship With Us</a>
+        <?php 
+          $i = 0;
 
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="outline-hover-green p-5 text-center h-100">
-            <h3 class="text-uppercase">Carriers</h3>
-            <p>Our carriers set us apart. Thanks to our reliable, coast-to-coast network, we're growing to become one of the nation's Top 100 freight brokerages.</p>
-            <a href="" class="btn btn-tertiary btn-lg mt-4">Partner With Us</a>
+          while(have_rows('shippers_carriers_section')): 
+          the_row(); 
 
+          $i++;
+
+          $borderClass = $i === 1 ? 'border-blue-light' : 'border-green';
+          
+        ?>
+          <div class="col-12 col-md-6 px-0">
+            <div class="text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="height: 50vw; max-height: 600px; background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+              <h3 class="text-uppercase"><?php echo get_sub_field('card_title'); ?></h3>
+              <p><?php echo get_sub_field('card_content'); ?></p>
+              <a href="<?php echo get_sub_field('card_button_link'); ?>" class="btn btn-lg mt-4 <?php echo $i === 1 ? 'btn-primary' : 'btn-tertiary'; ?>"><?php echo get_sub_field('card_button_text'); ?></a>
+            </div>
           </div>
+        <?php endwhile; ?>
         </div>
       </div>
     </div>
@@ -161,4 +183,7 @@ get_header(); ?>
 
   </main><!-- .Main -->
 
-<?php get_footer(); ?>
+<?php 
+
+          endwhile; 
+          get_footer(); ?>

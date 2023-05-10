@@ -8,17 +8,15 @@
 }
 
 @each $prop, $value in map-keys($colors) {
-    .bg-#{$prop} {
-        background-color: map.get($colors, $prop) !important;
-    }
-    .text-#{$prop} {
-        color: map.get($colors, $prop) !important;
-    }
-    .outline-hover-#{$prop} {
-      &:hover {
-        outline: 20px solid map.get($colors, $prop) !important;
-      }
-    }
+  .bg-#{$prop} {
+      background-color: map.get($colors, $prop) !important;
+  }
+  .text-#{$prop} {
+      color: map.get($colors, $prop) !important;
+  }
+  .border-#{$prop} {
+    border: 20px solid map.get($colors, $prop) !important;
+  }
 }
 
 @for $i from 0 through 20 {

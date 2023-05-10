@@ -47,6 +47,7 @@ function lh_setup() {
    */
 
     add_image_size( 'square_medium', 400, 400, true );
+    add_image_size( 'square_large', 600, 600, true );
 
   /**
    * Register menus

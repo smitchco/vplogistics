@@ -29,12 +29,12 @@
     &::before {
       content: '';
       width: 116px;
-      height: 1.5px; 
+      height: 2px; 
       background: $orange;
       display: block;
       position: absolute;
       left: 0; 
-      top: calc(50% - .75px);
+      top: calc(50% - 1px);
     }
 
     &::after {
@@ -42,8 +42,8 @@
       width: 8px;
       height: 8px;
       transform: rotate(45deg);
-      border-right: 1.5px solid $orange;
-      border-top: 1.5px solid $orange; 
+      border-right: 2px solid $orange;
+      border-top: 2px solid $orange; 
       left: 108px;
       display: block; 
       position: absolute; 
@@ -94,12 +94,12 @@
       &::before {
         content: '';
         width: 15px;
-        height: 1.5px; 
+        height: 2px; 
         background: $orange;
         display: block;
         position: absolute;
         left: 15px; 
-        top: calc(50% - .75px);
+        top: calc(50% - 1px);
       }
   
       &::after {
@@ -107,8 +107,8 @@
         width: 8px;
         height: 8px;
         transform: rotate(45deg);
-        border-right: 1.5px solid $orange;
-        border-top: 1.5px solid $orange; 
+        border-right: 2px solid $orange;
+        border-top: 2px solid $orange; 
         left: 22px;
         display: block; 
         position: absolute; 

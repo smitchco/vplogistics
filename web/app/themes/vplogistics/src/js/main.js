@@ -20,6 +20,6 @@ jQuery(document).ready(function() {
     autoplay: {
       delay: 5000
     },
-    spaceBetween: 0
+    spaceBetween: 30
   });
 });

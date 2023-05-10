@@ -5,17 +5,19 @@
 
 get_header(); ?>
 
-  <main class="Main" role="main">
+  <div class="container-fluid container--max">
+    <div class="row">
+      <div class="col-12">
+        <main class="main" role="main">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'template-parts/post' ); ?>
+            <?php get_template_part( 'template-parts/post' ); ?>
 
-      <?php the_post_navigation(); ?>
+          <?php endwhile; // end of the loop. ?>
 
-    <?php endwhile; // end of the loop. ?>
-
-  </main><!-- .Main -->
-
-<?php get_sidebar(); ?>
+        </main>
+      </div>
+    </div>
+  </div>
 <?php get_footer(); ?>

@@ -1,0 +1,27 @@
+.article {
+  position: relative; 
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 2px; 
+    background: $orange;
+    display: block;
+    position: absolute;
+    right: 20px; 
+    bottom: 30px;
+  }
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    border-right: 2px solid $orange;
+    border-top: 2px solid $orange; 
+    display: block; 
+    position: absolute; 
+    right: 22px; 
+    bottom: 21px;
+  }
+}

@@ -148,7 +148,7 @@ while(have_posts()): the_post();
           
         ?>
           <div class="col-12 col-md-6 px-0">
-            <div class="text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="height: 50vw; max-height: 600px; background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+            <div class="text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="height: 50vw; max-height: 600px; background-size: cover; background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
               <h3 class="text-uppercase"><?php echo get_sub_field('card_title'); ?></h3>
               <p><?php echo get_sub_field('card_content'); ?></p>
               <a href="<?php echo get_sub_field('card_button_link'); ?>" class="btn btn-lg mt-4 <?php echo $i === 1 ? 'btn-primary' : 'btn-tertiary'; ?>"><?php echo get_sub_field('card_button_text'); ?></a>

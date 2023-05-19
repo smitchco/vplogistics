@@ -69,14 +69,29 @@
     max-width: 240px;
     display: inline-block; 
     transition: all 0.5s linear; 
+    opacity: 1; 
 
-    .carousel__slide--active & {
-      opacity: 1; 
+    @media (min-width: $screen-md) {
+      opacity: 0; 
+      .carousel__slide--active & {
+        opacity: 1; 
+      }
     }
   }
 
   &--min {
-    min-width: 540px; 
-    min-height: 540px;
+    @media (min-width: $screen-md) {
+      min-width: 540px; 
+      min-height: 540px;
+    }
+  }
+
+  &--border {
+    background-size: cover; 
+
+    @media (min-width: $screen-md) {
+      height: 50vw; 
+      max-height: 600px; 
+    }
   }
 }

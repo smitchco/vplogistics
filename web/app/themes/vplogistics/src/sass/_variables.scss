@@ -30,10 +30,8 @@ $green: map.get($colors, 'green');
 $black: map.get($colors, 'black');
 $gray-light: lighten(map.get($colors, 'gray'), 30%);
 
-$font_display: 'Inter', sans-serif;
-$font_body: 'Inter', sans-serif;
-$font_tech: 'JetBrains Mono', monospace;
-$font_icon: 'Font Awesome 6 Free';
+$font_display: 'jaf-bernino-sans-comp', sans-serif;
+$font_body: 'articulat-cf', sans-serif;
 
 $font_weight_bold: 700;
 $font_weight_semibold: 600;

@@ -1,9 +1,25 @@
-.body {
+body {
   font-size: 16px;
+  font-style: $font-body;
+  font-weight: 300; 
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-display; 
+  font-weight: 800; 
 }
 
 h1, .h1 {
-  font-size: 6.25rem; 
+  font-size: 3.5rem; 
+
+  @media (min-width: $screen-md) {
+    font-size: 6.25rem; 
+  }
 }
 
 h2, .h2 {
@@ -16,6 +32,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 2.5rem; 
+  font-weight: 700;
 }
 
 h5, .h5 {
@@ -42,4 +59,11 @@ h6, .h6 {
   }
 }
 
+.font-body {
+  font-family: $font-body;
+  font-weight: 300; 
+}
 
+.font-display {
+  font-family: $font-display;
+}

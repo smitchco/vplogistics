@@ -4,15 +4,17 @@
   }
 
   &--home-hero {
-    position: relative; 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0; 
-      right: 0;
-      width: 50%;
-      background: $blue; 
-      height: 100%;
+    @media (min-width: $screen-md) {
+      position: relative; 
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0; 
+        right: 0;
+        width: 50%;
+        background: $blue; 
+        height: 100%;
+      }
     }
   }
 }

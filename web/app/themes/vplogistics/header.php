@@ -12,6 +12,9 @@
 <script>document.documentElement.className+=' js-enabled';</script>
 <?php #get_template_part('inc/js/webfontloader.js'); ?>
 <?php #get_template_part('inc/js/lazysizes.js'); ?>
+
+<link rel="stylesheet" href="https://use.typekit.net/qcm2bbi.css">
+
 <?php wp_head(); ?>
 </head>
 

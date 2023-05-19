@@ -16,10 +16,17 @@ jQuery(document).ready(function() {
   const swiperArticle = new Swiper(".swiper-container--article", {
     direction: "horizontal",
     loop: true,
-    slidesPerView: 2.25,
     autoplay: {
       delay: 5000
     },
-    spaceBetween: 30
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.125,
+      },
+      992: {
+        slidesPerView: 2.25,
+      }
+    },
   });
 });

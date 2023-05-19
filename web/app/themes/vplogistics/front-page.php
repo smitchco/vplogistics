@@ -37,16 +37,17 @@ while(have_posts()): the_post();
         while (have_rows('homepage_slider')): 
           the_row(); 
         ?>
-          <div class="col text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], 'square_medium')[0]; ?>)">
+          <div class="col-12 col-md text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], 'square_medium')[0]; ?>)">
             <div class="card card--min p-3 d-flex h-100">
               <a href="http://www.google.com" class="card__link"></a>
               <div class="card__body h-100 d-flex flex-column">
-                <h4 class="p card__overline mb-auto lh-100">
-                  <span class="card__overline__title py-3">
+                <h4 class="p card__overline mb-auto lh-100 font-body">
+                  <span class="card__overline__title py-3 font-body">
                     <?php echo get_sub_field('slider_title'); ?>
                   </span>
                 </h4>
-                <p class="lh-100 mt-auto p--small pb-0 mb-0 card__content pb-5">
+
+                <p class="lh-100 mt-auto p--small pb-0 mb-0 card__content py-5">
                   <?php echo get_sub_field('slider_content'); ?>
                 </p>
               </div>
@@ -91,7 +92,7 @@ while(have_posts()): the_post();
                   <div class="article p-5 position-relative h-100" style="background: url(<?php the_post_thumbnail_url('square_large'); ?>);">
                     <a href="<?php the_permalink(); ?>" class="card__link"></a>
                     <p class="article__overline">ARTICLE</p>
-                    <h4 class="article__title mt-5 pt-5">
+                    <h4 class="article__title mt-5 pt-5 p--large">
                       <?php the_title(); ?>
                     </h4>
                   </div>
@@ -112,22 +113,27 @@ while(have_posts()): the_post();
         <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Solutions Driven</h3>
           <p class="p--small">Another day, another customized shipping solution. Get moving with on-time shipping, real-time visibility and dedicated personal service.</p>
-          <a href="" class="btn-circle btn-lg mt-5"><i></i>Request A Quote</a>
-
+          
+          <a href="" class="btn-circle btn-lg mt-5">
+            <i></i>Request A Quote
+          </a>
         </div>
 
         <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Performance Driven</h3>
           <p class="p--small">Turn your supply chain into a competitive advantage. Learn how we connect a nationwide network with constantly-evolving technology.</p>
-          <a href="" class="btn-circle btn-lg mt-5"><i></i>Learn More</a>
 
+          <a href="" class="btn-circle btn-lg mt-5">
+            <i></i>Learn More
+          </a>
         </div>
 
         <div class="col-12 col-md-4 col-lg-3">
           <h3 class="h6 text-uppercase text-blue">Value Driven</h3>
           <p class="p--small">At VP Logistics, we take every shipment personally. Our teams are committed to industry-leading excellence and customer satisfaction.</p>
-          <a href="" class="btn-circle btn-lg mt-5"><i></i>Get To Know Us</a>
-
+          <a href="" class="btn-circle btn-lg mt-5">
+            <i></i>Get To Know Us
+          </a>
         </div>
       </div>
     </div>
@@ -143,47 +149,59 @@ while(have_posts()): the_post();
           the_row(); 
 
           $i++;
-
           $borderClass = $i === 1 ? 'border-blue-light' : 'border-green';
           
         ?>
           <div class="col-12 col-md-6 px-0">
-            <div class="text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="height: 50vw; max-height: 600px; background-size: cover; background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
-              <h3 class="text-uppercase"><?php echo get_sub_field('card_title'); ?></h3>
-              <p><?php echo get_sub_field('card_content'); ?></p>
-              <a href="<?php echo get_sub_field('card_button_link'); ?>" class="btn btn-lg mt-4 <?php echo $i === 1 ? 'btn-primary' : 'btn-tertiary'; ?>"><?php echo get_sub_field('card_button_text'); ?></a>
+            <div class="card--border text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+              <h3 class="text-uppercase">
+                <?php echo get_sub_field('card_title'); ?>
+              </h3>
+              <p>
+                <?php echo get_sub_field('card_content'); ?>
+              </p>
+              <a href="<?php echo get_sub_field('card_button_link'); ?>" class="btn btn-lg mt-4 <?php echo $i === 1 ? 'btn-primary' : 'btn-tertiary'; ?>">
+                <?php echo get_sub_field('card_button_text'); ?>
+              </a>
             </div>
           </div>
         <?php endwhile; ?>
         </div>
       </div>
     </div>
-
   </section>
 
   <section class="py-5">
     <div class="container-fluid container--max">
       <div class="row">
-        <div class="col-12 col-md-6 py-5">
+        <div class="col-12 col-md-6 py-5 my-auto">
           <h3 class="h1 text-blue-light lh-100 text-uppercase"><strong>Join A Team of Thinkers &amp; Doers.</strong></h1>
           <a href="" class="btn btn-primary btn-lg">Contact Us</a>
-
         </div>
         <div class="col-12 col-md-6 py-5">
-          <h3>Who says logistics can't be fun</h3>
-          <p>We're busy shaping the future. If you're a problem solver who values personal connections and transformational technology, we'd love to meet you.</p>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="https://placehold.co/300x300" class="img--full"/>
+
+              <h3 class="p--large pt-5 pl-md-5">Who says logistics can't be fun</h3>
+              <p class="p--small pl-md-5">We're busy shaping the future. If you're a problem solver who values personal connections and transformational technology, we'd love to meet you.</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="https://placehold.co/300x425"  class="img--full"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 py-5">
+              <img src="https://placehold.co/750x300"  class="img--full"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
- 
-
-  </main><!-- .Main -->
+</main>
 
 <?php 
-
-          endwhile; 
-          get_footer(); ?>
+  endwhile; 
+  get_footer();
+?>

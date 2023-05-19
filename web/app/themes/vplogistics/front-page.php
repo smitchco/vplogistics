@@ -114,24 +114,24 @@ while(have_posts()): the_post();
           <h3 class="h6 text-uppercase text-blue">Solutions Driven</h3>
           <p class="p--small">Another day, another customized shipping solution. Get moving with on-time shipping, real-time visibility and dedicated personal service.</p>
           
-          <a href="" class="btn-circle btn-lg mt-5">
+          <a href="" class="btn-circle btn-lg mt-md-5">
             <i></i>Request A Quote
           </a>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0">
           <h3 class="h6 text-uppercase text-blue">Performance Driven</h3>
           <p class="p--small">Turn your supply chain into a competitive advantage. Learn how we connect a nationwide network with constantly-evolving technology.</p>
 
-          <a href="" class="btn-circle btn-lg mt-5">
+          <a href="" class="btn-circle btn-lg mt-md-5">
             <i></i>Learn More
           </a>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0">
           <h3 class="h6 text-uppercase text-blue">Value Driven</h3>
           <p class="p--small">At VP Logistics, we take every shipment personally. Our teams are committed to industry-leading excellence and customer satisfaction.</p>
-          <a href="" class="btn-circle btn-lg mt-5">
+          <a href="" class="btn-circle btn-lg mt-md-5">
             <i></i>Get To Know Us
           </a>
         </div>
@@ -180,13 +180,13 @@ while(have_posts()): the_post();
         </div>
         <div class="col-12 col-md-6 py-5">
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-6">
               <img src="https://placehold.co/300x300" class="img--full"/>
 
               <h3 class="p--large pt-5 pl-md-5">Who says logistics can't be fun</h3>
               <p class="p--small pl-md-5">We're busy shaping the future. If you're a problem solver who values personal connections and transformational technology, we'd love to meet you.</p>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-6">
               <img src="https://placehold.co/300x425"  class="img--full"/>
             </div>
           </div>

@@ -24,7 +24,7 @@
     <div class="container-fluid container--max">
       <div class="row">
         <div class="col-auto">
-          <div class="header-logo py-5">
+          <div class="header__logo py-5">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
               <div class="svg svg--logo">
                 <?php include( 'inc/svg/logo-horizontal.svg' ); ?>
@@ -34,10 +34,16 @@
         </div>
 
         <div class="col-auto ml-auto">
+          
           <nav class="header__nav h-100" role="navigation">
+
+            <button class="header__nav__trigger text-white" aria-label="mobile navigation" role="navigation">
+              <i></i>
+            </button>
+            
             <?php wp_nav_menu( array(
               'container' => false,
-              'menu_class' => 'header__menu h-100',
+              'menu_class' => 'header__menu d-none d-lg-flex h-100',
               'theme_location' => 'header'
             ) ); ?>
           </nav>

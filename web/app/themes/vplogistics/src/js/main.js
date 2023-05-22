@@ -13,6 +13,12 @@ jQuery(document).ready(function() {
     }
   );
 
+  jQuery('.header__nav__trigger').click(function() {
+    jQuery('.header__menu').toggleClass('d-none');
+    jQuery('body').toggleClass('body--menu--active');
+    jQuery(this).toggleClass('header__nav__trigger--active');
+  });
+
   const swiperArticle = new Swiper(".swiper-container--article", {
     direction: "horizontal",
     loop: true,

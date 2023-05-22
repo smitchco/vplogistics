@@ -14,8 +14,8 @@ while(have_posts()): the_post();
   <section class="pt-5 container--home-hero">
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-6 py-5">
-          <h1 class="header__title text-uppercase lh-100 py-5">We've Got It from Here</h1>
+        <div class="col-12 col-lg-6 py-md-5">
+          <h1 class="header__title text-uppercase lh-100 py-md-5">We've Got It from Here</h1>
         </div>
         <div class="col-12 col-lg-6 bg-blue">
           <div class="bg-blue text-white p-5">

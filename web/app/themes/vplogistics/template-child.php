@@ -28,14 +28,6 @@ get_header(); ?>
       </div>
     </div>
   </section>
-
-
-
-<main class="main" role="main">
-  <div class="container-fluid container--max">
-    <section>
-    </section>
-  </div>
 </main>
 
 <?php get_footer(); ?>

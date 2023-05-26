@@ -194,7 +194,7 @@ while(have_posts()): the_post();
                 <img src="<?php echo get_field('bottom_images')[0]['sizes']['400x400']; ?>" class="img--full"/>
               <?php endif; ?>
 
-              <div class="p--large pt-5 pl-md-5">
+              <div class="pt-5 pl-md-5">
                 <?php echo get_field('bottom_description'); ?>
               </div>
             

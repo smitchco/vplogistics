@@ -181,9 +181,10 @@ while(have_posts()): the_post();
             </h3>
           <?php 
             endif;
-            if (get_field('bottom_button_link') && get_field('bottom_button_text')): 
+
+            if (get_field('bottom_button_link')): 
           ?>
-            <a href="<?php echo get_field('bottom_button_link'); ?>" class="btn btn-primary btn-lg"><?php echo get_field('bottom_button_text'); ?></a>
+            <a href="<?php echo get_field('bottom_button_link')['url']; ?>" class="btn btn-primary btn-lg"><?php echo get_field('bottom_button_link')['title']; ?></a>
           <?php endif; ?>
         </div>
         <div class="col-12 col-md-6 py-5">
@@ -207,7 +208,7 @@ while(have_posts()): the_post();
           <?php if(get_field('bottom_images')[2]): ?> 
             <div class="row">
               <div class="col-12 py-5">
-                <img src="<?php echo get_field('bottom_images')[2]['sizes']['400x400']; ?>" class="img--full"/>
+                <img src="<?php echo get_field('bottom_images')[2]['sizes']['750x300']; ?>" class="img--full"/>
               </div>
             </div>
           <?php endif; ?>

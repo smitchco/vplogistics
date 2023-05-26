@@ -37,7 +37,7 @@ while(have_posts()): the_post();
         while (have_rows('homepage_slider')): 
           the_row(); 
         ?>
-          <div class="col-12 col-md text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], 'square_medium')[0]; ?>)">
+          <div class="col-12 col-md text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], '400x400')[0]; ?>)">
             <div class="card card--min p-3 d-flex h-100">
               <a href="http://www.google.com" class="card__link"></a>
               <div class="card__body h-100 d-flex flex-column">
@@ -89,7 +89,7 @@ while(have_posts()): the_post();
               while ($q->have_posts()): $q->the_post(); 
               ?>
                 <div class="swiper-slide text-white">
-                  <div class="article p-5 position-relative h-100" style="background: url(<?php the_post_thumbnail_url('square_large'); ?>);">
+                  <div class="article p-5 position-relative h-100" style="background: url(<?php the_post_thumbnail_url('400x400'); ?>);">
                     <a href="<?php the_permalink(); ?>" class="card__link"></a>
                     <p class="article__overline">ARTICLE</p>
                     <h4 class="article__title mt-5 pt-5 p--large">
@@ -153,7 +153,7 @@ while(have_posts()): the_post();
           
         ?>
           <div class="col-12 col-md-6 px-0">
-            <div class="card--border text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+            <div class="card--border text-white p-5 text-center d-flex align-items-center justify-content-center flex-column <?php echo $borderClass; ?>" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], '400x400')[0]; ?>)">
               <h3 class="text-uppercase">
                 <?php echo get_sub_field('card_title'); ?>
               </h3>
@@ -175,26 +175,42 @@ while(have_posts()): the_post();
     <div class="container-fluid container--max">
       <div class="row">
         <div class="col-12 col-md-6 py-5 my-auto">
-          <h3 class="h1 text-blue-light lh-100 text-uppercase"><strong>Join A Team of Thinkers &amp; Doers.</strong></h1>
-          <a href="" class="btn btn-primary btn-lg">Contact Us</a>
+          <?php if(get_field('bottom_title')): ?> 
+            <h3 class="h1 text-blue-light lh-100 text-uppercase">
+              <strong><?php echo get_field('bottom_title'); ?></strong>
+            </h3>
+          <?php 
+            endif;
+            if (get_field('bottom_button_link') && get_field('bottom_button_text')): 
+          ?>
+            <a href="<?php echo get_field('bottom_button_link'); ?>" class="btn btn-primary btn-lg"><?php echo get_field('bottom_button_text'); ?></a>
+          <?php endif; ?>
         </div>
         <div class="col-12 col-md-6 py-5">
           <div class="row">
-            <div class="col-6">
-              <img src="https://placehold.co/300x300" class="img--full"/>
+            <div class="<?php echo get_field('bottom_images')[0] ? 'col-6' :'col-12'; ?>">
+              <?php if(get_field('bottom_images')[0]): ?> 
+                <img src="<?php echo get_field('bottom_images')[0]['sizes']['400x400']; ?>" class="img--full"/>
+              <?php endif; ?>
 
-              <h3 class="p--large pt-5 pl-md-5">Who says logistics can't be fun</h3>
-              <p class="p--small pl-md-5">We're busy shaping the future. If you're a problem solver who values personal connections and transformational technology, we'd love to meet you.</p>
+              <div class="p--large pt-5 pl-md-5">
+                <?php echo get_field('bottom_description'); ?>
+              </div>
+            
             </div>
-            <div class="col-6">
-              <img src="https://placehold.co/300x425"  class="img--full"/>
-            </div>
+            <?php if(get_field('bottom_images')[1]): ?> 
+              <div class="col-6">
+                <img src="<?php echo get_field('bottom_images')[1]['sizes']['300x425']; ?>" class="img--full"/>
+              </div>
+            <?php endif; ?>
           </div>
-          <div class="row">
-            <div class="col-12 py-5">
-              <img src="https://placehold.co/750x300"  class="img--full"/>
+          <?php if(get_field('bottom_images')[2]): ?> 
+            <div class="row">
+              <div class="col-12 py-5">
+                <img src="<?php echo get_field('bottom_images')[2]['sizes']['400x400']; ?>" class="img--full"/>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>

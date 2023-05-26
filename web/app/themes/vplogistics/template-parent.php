@@ -46,7 +46,7 @@ get_header(); ?>
             while ($q->have_posts()): $q->the_post();
 
             ?>
-              <div class="col-12 col-md-4 text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], 'square_medium')[0]; ?>)">
+              <div class="col-12 col-md-4 text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], '400x400')[0]; ?>)">
                 <div class="card card--min p-3 d-flex h-100">
                   <a href="<?php echo the_permalink(); ?>" class="card__link"></a>
                   <div class="card__body h-100 d-flex flex-column">
@@ -68,7 +68,7 @@ get_header(); ?>
               <div class="row flex-column">
                 
                 <div class="col">
-                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column " style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column " style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], '400x400')[0]; ?>)">
                     <h3 class="text-uppercase">
                       Carriers
                     </h3>
@@ -76,7 +76,7 @@ get_header(); ?>
                 </div>
 
                 <div class="col">
-                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column " style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], 'square_medium')[0]; ?>)">
+                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column " style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], '400x400')[0]; ?>)">
                     <h3 class="text-uppercase">
                       Shippers
                     </h3>

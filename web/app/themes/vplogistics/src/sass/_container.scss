@@ -4,7 +4,7 @@
   }
 
   &--home-hero {
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
       position: relative; 
       &::before {
         content: '';

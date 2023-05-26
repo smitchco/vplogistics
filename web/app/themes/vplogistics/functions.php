@@ -46,8 +46,11 @@ function lh_setup() {
    * add_image_size( 'large', 1024, 1024, false );
    */
 
-    add_image_size( 'square_medium', 400, 400, true );
-    add_image_size( 'square_large', 600, 600, true );
+    add_image_size( '400x400', 400, 400, true );
+    add_image_size( '600x600', 600, 600, true );
+
+    add_image_size( '300x425', 300, 425, true );
+    add_image_size( '750x300', 750, 300, true );
 
   /**
    * Register menus

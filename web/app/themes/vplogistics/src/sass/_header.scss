@@ -1,7 +1,35 @@
 .header {
-  &__title {
-    font-size: 6.5rem; 
-    color: $blue;
+
+  &__overline {
+    font-size: 1.125rem; 
+    font-weight: bold; 
+    color: $blue; 
+    padding-left: 150px;
+    position: relative; 
+    margin-bottom: 2rem; 
+    &::before {
+      content: '';
+      width: 125px;
+      height: 2px; 
+      background: $orange;
+      display: block;
+      position: absolute;
+      left: 0; 
+      top: calc(50% - 1px);
+    }
+
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      border-right: 2px solid $orange;
+      border-top: 2px solid $orange; 
+      left: 117px;
+      display: block; 
+      position: absolute; 
+      top: calc(50% - 4px);
+    }
   }
 
   &__logo {

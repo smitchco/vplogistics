@@ -24,6 +24,10 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 4rem; 
+
+  @media (min-width: $screen-lg) {
+    font-size: 5rem; 
+  }
 }
 
 h3, .h3 {

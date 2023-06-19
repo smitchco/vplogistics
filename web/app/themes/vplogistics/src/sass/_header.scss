@@ -1,5 +1,10 @@
 .header {
 
+  &__background {
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+
   &__overline {
     font-size: 1.125rem; 
     font-weight: bold; 

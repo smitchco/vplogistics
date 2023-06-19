@@ -54,7 +54,7 @@ get_header(); ?>
             $i++;
 
             ?>
-              <div class="col-12 col-md-6 <?php echo $i <= 3 ? 'col-lg-4' : 'col-lg-3'; ?> text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], '400x400')[0]; ?>)">
+              <div class="col-12 col-md-6 <?php echo $i <= 3 ? 'col-lg-4' : 'col-lg-3'; ?> text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('preview_image')['ID'], '400x400')[0]; ?>); background-position: center;">
                 <div class="card card--min p-3 d-flex h-100">
                   <a href="<?php echo the_permalink(); ?>" class="card__link"></a>
                   <div class="card__body h-100 d-flex flex-column">
@@ -65,7 +65,7 @@ get_header(); ?>
                     </h4>
 
                     <p class="lh-100 mt-auto p--small pb-0 mb-0 card__content py-5">
-                      <?php //echo get_sub_field('slider_content'); ?>
+                      <?php echo get_sub_field('slider_content'); ?>
                     </p>
                   </div>
                 </div>

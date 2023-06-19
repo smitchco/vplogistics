@@ -26,3 +26,7 @@
     line-height: percentage(math.div($multiplier, 100)) !important;
   }
 }
+
+.text-shadow {
+  text-shadow: 0 0 20px rgba(0,0,0,12.5);
+}

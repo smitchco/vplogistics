@@ -51,6 +51,7 @@ function lh_setup() {
 
     add_image_size( '300x425', 300, 425, true );
     add_image_size( '750x300', 750, 300, true );
+    add_image_size( '1440x520', 1440, 520, true );
 
   /**
    * Register menus

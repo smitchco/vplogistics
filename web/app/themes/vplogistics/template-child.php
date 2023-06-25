@@ -18,7 +18,7 @@ get_header(); ?>
         </div>
         <div class="col-12 col-lg-7 mt-auto">
           <div class="px-5 pb-5">
-            <h2 class="header__overline font-body mb-0">
+            <h2 class="header__overline font-body mb-0 text-white text-uppercase">
               <?php the_title(); ?>
             </h2>
           </div>
@@ -31,12 +31,12 @@ get_header(); ?>
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
         <div class="col-12">
-          <button>Request a Quote</button>
+          <button class="btn btn-tab">Request a Quote</button>
         </div>
       </div>
       <div class="row py-5">
         <div class="col-12 col-lg-3">
-          <h2 class="text-blue h4">
+          <h2 class="text-blue h4 text-uppercase">
             Keep your containers on the move.
           </h2>
         </div>
@@ -83,7 +83,7 @@ get_header(); ?>
           <img src="https://placehold.co/600x600" class="img--full"/>
         </div>
         <div class="col-12 col-lg-6">
-          <h3 class="text-blue">
+          <h3 class="text-blue text-uppercase">
             Leave the ports and ramps to us.
           </h3>
           <p>The best drayage partnerships come down to experience, high-touch support and leading technology. With the ever-changing landscape of transportation regulations and carriers, staying up-to-date is our full-time job.</p>
@@ -127,17 +127,22 @@ get_header(); ?>
     <div class="container-fluid container--max">
       <div class="row">
         <div class="col-12 col-lg-3">
-          <h4 class="text-blue text-uppercase"><?php the_title(); ?> Quote Request Form</h4>
-          <p class="p">Let's get your container rolling. We book drayage at every ramp and port in the country. Fill out the form below &mdash; we've got the experts on standby.</p>
+          <h4 class="text-blue text-uppercase">
+            <?php the_title(); ?> Quote Request Form
+          </h4>
+          <p class="p">
+            Let's get your container rolling. We book drayage at every ramp and port in the country. Fill out the form below &mdash; we've got the experts on standby.
+          </p>
         </div>
         <div class="col-12 col-lg-9">
-          <?php echo do_shortcode('[contact-form-7 id="56"]'); ?>
+          <div class="pl-lg-5">
+            <?php echo do_shortcode('[contact-form-7 id="56"]'); ?>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 </main>
-
 
 <?php get_footer(); ?>

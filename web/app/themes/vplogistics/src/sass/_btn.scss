@@ -9,6 +9,18 @@
     border: none; 
   }
 
+  &-tab {
+    background: $blue-light; 
+    color: $white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:hover {
+      background: $blue;
+      color: $white; 
+    }
+  }
+
   &-secondary {
     background: $blue; 
     border: 1px solid $blue-light; 

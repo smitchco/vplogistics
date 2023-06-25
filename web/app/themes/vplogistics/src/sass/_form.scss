@@ -1,0 +1,25 @@
+.wpcf7-form {
+  @extend .row;
+
+  label {
+    color: $blue-light; 
+    font-weight: bold; 
+    font-size: 1rem;
+    width: 100%;
+    display: block; 
+  }
+  p {
+    @extend .col-6;
+  }
+  .wpcf7-form-control {
+    &.wpcf7-text, &.wpcf7-select, &.wpcf7-date, &.wpcf7-number {
+      @extend .form-control;
+    }
+  }
+  .wpcf7-submit {
+    @extend .form-control;
+    @extend .btn;
+    @extend .btn-primary;
+    padding: 0; 
+  }
+}

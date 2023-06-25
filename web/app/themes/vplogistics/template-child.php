@@ -51,7 +51,13 @@ get_header(); ?>
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
         <div class="col-12 text-center">
-          <img src="https://placehold.co/1200x475" class="img--full"/>
+          <div class="video__container">
+            <div class="video__circles">
+              <?php include( 'inc/svg/circles.svg' ); ?>
+            </div>
+
+            <iframe src='https://www.youtube.com/embed/QILiHiTD3uc' frameborder='0' allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>

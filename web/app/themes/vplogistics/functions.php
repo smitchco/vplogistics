@@ -48,7 +48,6 @@ function lh_setup() {
 
     add_image_size( '400x400', 400, 400, true );
     add_image_size( '600x600', 600, 600, true );
-
     add_image_size( '300x425', 300, 425, true );
     add_image_size( '750x300', 750, 300, true );
     add_image_size( '1440x520', 1440, 520, true );

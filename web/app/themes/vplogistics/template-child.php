@@ -5,7 +5,10 @@
  * Template for child pages
  */
 
-get_header(); ?>
+get_header(); 
+
+while(have_posts()): the_post(); 
+?>
 
 <main>
   <section class="py-5 header__background" style="background-image: url(<?php echo get_the_post_thumbnail_url($post, '1440x520'); ?>);">
@@ -13,7 +16,7 @@ get_header(); ?>
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-5">
           <h1 class="text-uppercase lh-100 py-md-5 h2 text-white text-shadow">
-            It sounds complicated, because it is complicated.
+            <?php echo get_field('hero_text'); ?>
           </h1>
         </div>
         <div class="col-12 col-lg-7 mt-auto">
@@ -31,74 +34,83 @@ get_header(); ?>
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
         <div class="col-12">
-          <button class="btn btn-tab">Request a Quote</button>
+          <a class="btn btn-tab" href="#quote-form">
+            <?php echo get_field('top_button_text'); ?>
+          </a>
         </div>
       </div>
       <div class="row py-5">
         <div class="col-12 col-lg-3">
           <h2 class="text-blue h4 text-uppercase">
-            Keep your containers on the move.
+            <?php echo get_field('top_content_header'); ?>
           </h2>
         </div>
         <div class="col-12 col-lg-9">
-          Some refer to drayage as "the first mile." But we like call it "the make-it-or-break-it mile."" That's because setbacks at this stage affect your entire supply chain. This small but mighty leg of the intermodal journey can get complex with equipment, tight scheduling, fees and regulations. Our teams can navigate every port, nationwide.
+          <p><?php echo get_field('top_content_paragraph'); ?></p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5">
-    <div class="container-fluid container--max">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 text-center">
-          <div class="video__container">
-            <div class="video__circles">
-              <?php include( 'inc/svg/circles.svg' ); ?>
-            </div>
+  <?php if(get_field('video')): ?>
+    <section class="py-5">
+      <div class="container-fluid container--max">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 text-center">
+            <div class="video__container">
+              <div class="video__circles">
+                <?php include( 'inc/svg/circles.svg' ); ?>
+              </div>
 
-            <iframe src='https://www.youtube.com/embed/QILiHiTD3uc' frameborder='0' allowfullscreen></iframe>
+              <iframe src='<?php echo get_field('video'); ?>' frameborder='0' allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; ?>
 
-  <section class="py-5">
-    <div class="container-fluid container--max">
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <h4 class="text-blue h6 text-uppercase">A Reliable Shipping Network</h4>
-          <p class="p">VPL knows the rules and players with short-distance, local connectors. Our rock-solid relationships start here, where they matter most.</p>
-        </div>
-        <div class="col-12 col-lg-4">
-          <h4 class="text-blue h6 text-uppercase">Advanced Transportation Technology</h4>
-          <p class="p">Navigating ports and ramps with precision saves you time and money. Our drayage-specific technology gives us insight into rate analytics &mdash; so you get the best rates available.</p>
-        </div>
-        <div class="col-12 col-lg-4">
-          <h4 class="text-blue h6 text-uppercase">Flexible Solutions</h4>
-          <p class="p">The most experienced drayage teams have seen it all. We anticipate challenges all day long and keep the right resources in the right place, at the right time.</p>
+  <?php if(have_rows('bullet_points')): ?>
+    <section class="py-5">
+      <div class="container-fluid container--max">
+        <div class="row">
+          <?php 
+            while(have_rows('bullet_points')): the_row(); 
+          ?>
+            <div class="col-12 col-lg-4">
+              <h4 class="text-blue h6 text-uppercase">
+                <?php echo get_sub_field('bullet_point_title') ?>
+              </h4>
+              <p class="p">
+                <?php echo get_sub_field('bullet_point_paragraph') ?>
+              </p>
+            </div>
+          <?php endwhile; ?>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; ?>
 
   <section class="py-5">
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-6">
-          <img src="https://placehold.co/600x600" class="img--full"/>
-        </div>
+        <?php if(get_field('middle_image')): ?>
+          <div class="col-12 col-lg-6">
+            <img src="<?php echo get_field('middle_image')[0]['sizes']['400x400']; ?>" class="img--full"/>
+          </div>
+        <?php endif; ?>
         <div class="col-12 col-lg-6">
           <h3 class="text-blue text-uppercase">
-            Leave the ports and ramps to us.
+            <?php echo get_field('middle_content_title'); ?>
           </h3>
-          <p>The best drayage partnerships come down to experience, high-touch support and leading technology. With the ever-changing landscape of transportation regulations and carriers, staying up-to-date is our full-time job.</p>
+          <p><?php echo get_field('middle_content_paragraph'); ?></p>
         </div>
       </div>
     </div>
   </section>
+  
 
-  <section class="py-5">
+  <section class="py-5" id="quote-form">
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
       <?php
@@ -134,10 +146,10 @@ get_header(); ?>
       <div class="row">
         <div class="col-12 col-lg-3">
           <h4 class="text-blue text-uppercase">
-            <?php the_title(); ?> Quote Request Form
+            <?php the_title(); ?> <?php echo get_field('form_request_title'); ?>
           </h4>
           <p class="p">
-            Let's get your container rolling. We book drayage at every ramp and port in the country. Fill out the form below &mdash; we've got the experts on standby.
+            <?php echo get_field('form_request_paragraph'); ?>
           </p>
         </div>
         <div class="col-12 col-lg-9">
@@ -151,4 +163,6 @@ get_header(); ?>
 
 </main>
 
-<?php get_footer(); ?>
+<?php
+endwhile; 
+get_footer(); ?>

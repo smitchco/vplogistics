@@ -96,7 +96,7 @@ while(have_posts()): the_post();
       <div class="row justify-content-center align-items-center">
         <?php if(get_field('middle_image')): ?>
           <div class="col-12 col-lg-6">
-            <img src="<?php echo get_field('middle_image')[0]['sizes']['400x400']; ?>" class="img--full"/>
+            <img src="<?php echo get_field('middle_image')['sizes']['600x600']; ?>" class="img--full"/>
           </div>
         <?php endif; ?>
         <div class="col-12 col-lg-6">
@@ -110,7 +110,7 @@ while(have_posts()): the_post();
   </section>
   
 
-  <section class="py-5" id="quote-form">
+  <section class="py-5">
     <div class="container-fluid container--max">
       <div class="row justify-content-center align-items-center">
       <?php
@@ -141,15 +141,15 @@ while(have_posts()): the_post();
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="py-5" id="quote-form">
     <div class="container-fluid container--max">
       <div class="row">
         <div class="col-12 col-lg-3">
           <h4 class="text-blue text-uppercase">
-            <?php the_title(); ?> <?php echo get_field('form_request_title'); ?>
+            <?php the_title(); ?> <?php echo get_field('form_content_title'); ?>
           </h4>
           <p class="p">
-            <?php echo get_field('form_request_paragraph'); ?>
+            <?php echo get_field('form_content_paragraph'); ?>
           </p>
         </div>
         <div class="col-12 col-lg-9">

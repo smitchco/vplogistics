@@ -39,7 +39,7 @@ while(have_posts()): the_post();
         ?>
           <div class="col-12 col-md text-white carousel__slide overflow-hidden px-0" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('slider_image')['ID'], '400x400')[0]; ?>)">
             <div class="card card--min p-3 d-flex h-100">
-              <a href="http://www.google.com" class="card__link"></a>
+              <a href="<?php echo get_sub_field('slider_link'); ?>" class="card__link"></a>
               <div class="card__body h-100 d-flex flex-column">
                 <h4 class="p card__overline mb-auto lh-100 font-body">
                   <span class="card__overline__title py-3 font-body">

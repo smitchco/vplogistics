@@ -27,6 +27,15 @@
   }
 }
 
+@for $i from 1 through 9 {
+  $multiplier: 100 * $i;
+
+  .fw-#{$multiplier} {
+    font-weight: $multiplier !important;
+  }
+}
+
+
 .text-shadow {
   text-shadow: 0 0 20px rgba(0,0,0,12.5);
 }

@@ -6,7 +6,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('Post'); ?>>
 
   <header class="post__header">
-    <h1 class="h2"><?php the_title(); ?></h2>
+    <h1 class="h2 text-uppercase text-blue lh-100">
+      <?php the_title(); ?>
+    </h1>
 
     <div class="post__meta">
       Posted by <?php the_author(); ?>

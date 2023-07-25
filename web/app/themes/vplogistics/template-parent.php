@@ -70,26 +70,31 @@ get_header(); ?>
                   </div>
                 </div>
               </div>
-            <?php endwhile; ?>
+            <?php 
+              endwhile; 
+              wp_reset_postdata(); 
+            
+            ?>
 
             <div class="col-12 col-md-6 col-lg-3 px-0">
               <div class="row flex-column h-100">
+                <?php 
+                  while(have_rows('other_section')): the_row(); 
+                ?>
                 
-                <div class="col">
-                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column h-100" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], '400x400')[0]; ?>)">
-                    <h3 class="m-0 text-uppercase">
-                      Carriers
-                    </h3>
+                  <div class="col position-relative">
+                    <a href="<?php echo get_sub_field('link')['url']; ?>" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></a>
+                    <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column h-100" style="background-size: cover; background-position: center; background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('image')['ID'], '400x400')[0]; ?>)">
+                      <h3 class="m-0 text-uppercase text-white">
+                        <?php echo get_sub_field('title'); ?>
+                      </h3>
+                    </div>
                   </div>
-                </div>
 
-                <div class="col">
-                  <div class="p-5 text-center d-flex align-items-center justify-content-center flex-column h-100" style="background-image: url(<?php echo wp_get_attachment_image_src(get_sub_field('card_background_image')['ID'], '400x400')[0]; ?>)">
-                    <h3 class="m-0 text-uppercase">
-                      Shippers
-                    </h3>
-                  </div>
-                </div>
+                <?php 
+                  endwhile; 
+                ?>
+ 
               </div>
             </div>
           </div>

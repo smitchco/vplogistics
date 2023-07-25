@@ -77,15 +77,20 @@ while(have_posts()): the_post();
           <?php 
             while(have_rows('bullet_points')): the_row(); 
           ?>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="mb-4">
+                <?php echo get_sub_field('bullet_point_svg'); ?>
+              </div>
               <h4 class="text-blue h6 text-uppercase">
-                <?php echo get_sub_field('bullet_point_title') ?>
+                <?php echo get_sub_field('bullet_point_title'); ?>
               </h4>
               <p class="p">
-                <?php echo get_sub_field('bullet_point_paragraph') ?>
+                <?php echo get_sub_field('bullet_point_paragraph'); ?>
               </p>
             </div>
           <?php endwhile; ?>
+          <div class="col-12 col-sm-6 col-lg-3">
+          </div>
         </div>
       </div>
     </section>

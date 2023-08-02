@@ -14,6 +14,7 @@ $colors: (
     'blue-light': #005CB9,
     'gold': #EF9411, 
     'gray': #91978D, 
+    'gray-light': #EEEEEE,
     'peach': #F4D6B3,
     'white': #FFFFFF, 
     'green': #40CEA9, 
@@ -24,6 +25,7 @@ $blue: map.get($colors, 'blue');
 $blue-light: map.get($colors, 'blue-light');
 $gold: map.get($colors, 'gold'); 
 $gray: map.get($colors,'gray'); 
+$gray: map.get($colors,'gray-light'); 
 $peach: map.get($colors, 'peach');
 $white: map.get($colors, 'white'); 
 $green: map.get($colors, 'green'); 

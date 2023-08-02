@@ -77,9 +77,12 @@ h6, .h6 {
 
 .font-body {
   font-family: $font-body;
-  font-weight: 300; 
 }
 
 .font-display {
   font-family: $font-display;
+}
+
+body {
+  @extend .font-body;
 }

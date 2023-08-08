@@ -89,7 +89,11 @@ body {
 
 .article-content {
   p, ul, li {
-    @extend .p
+    @extend .p;
+    strong {
+      font-family: $font-body;
+      font-weight: $font_weight_semibold; 
+    }
   }
   h3 {
     font-size: 1.5rem;

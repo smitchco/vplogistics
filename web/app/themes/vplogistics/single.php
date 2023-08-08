@@ -63,11 +63,13 @@ get_header(); ?>
                 </div>
               </div>
               <div class="col-12 col-lg-3">
-                <div class="bg-gray-light p-4 ml-xl-5" style="position: sticky; top: 30px;">
+                <div class="bg-gray-light ml-xl-5" style="position: sticky; top: 30px;">
                   <img src="<?php echo wp_get_attachment_image_src(186, '300x150')[0]; ?>" class="img--full" />
-                  <h4 class="p--med font-body mt-3">Join Our Network</h4>
-                  <p class="p--med mb-0">All carriers must apply to be a part of our network. See what it takes to join our team.</p>
-                  <a href="" class="btn btn-primary mt-3 d-block">Apply Today</a>
+                  <div class="p-4">
+                    <h4 class="p--med font-body mt-3">Join Our Network</h4>
+                    <p class="p--med mb-0">All carriers must apply to be a part of our network. See what it takes to join our team.</p>
+                    <a href="" class="btn btn-primary mt-3 d-block">Apply Today</a>
+                  </div>
                 </div>
               </div>
             </div>

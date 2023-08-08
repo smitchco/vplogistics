@@ -58,7 +58,9 @@ get_header(); ?>
                 </div>
               </div>
               <div class="col-12 col-lg-7">
-                <?php the_content(); ?>
+                <div class="article-content">
+                  <?php the_content(); ?>
+                </div>
               </div>
               <div class="col-12 col-lg-3">
                 <div class="bg-gray-light p-4 ml-xl-5" style="position: sticky; top: 30px;">
